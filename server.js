@@ -7,12 +7,12 @@ const PORT = process.env.port || 3001;
 
 const app = express();
 
-// Middleware
+ 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// app.use(express.static('public'));
-app.use(express.static(path.join(__dirname, 'Develop', 'public')));
+ 
+app.use(express.static('public'));
 
 
 app.use("/api", apiRoutes);
